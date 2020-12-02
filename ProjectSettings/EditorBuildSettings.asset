@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/_BowAndArrow/Main.unity
     guid: 0bdc2251efd355d45add28195d99d336
   - enabled: 1
-    path: Assets/simple modular human/scene/test_terrain.unity
+    path: Assets/simple modular human/scene/test_terrain2.unity
     guid: 7924b58cfceabaa42af7eac4cd9a0cb6
   m_configObjects: {}
