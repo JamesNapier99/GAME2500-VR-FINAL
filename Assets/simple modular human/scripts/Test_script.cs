@@ -12,6 +12,7 @@ public class Test_script : MonoBehaviour
    public Animator ani;
    public GameObject aim_point;
 
+    bool collided;
     public bool execute_walking;
     public bool execute_sitting;
     public bool execute_stealing;
@@ -168,7 +169,6 @@ public class Test_script : MonoBehaviour
 
     void Update()
     {
-
         if(!ready)
         {
             return;
