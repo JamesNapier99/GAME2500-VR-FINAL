@@ -47,10 +47,14 @@ public class Test_script : MonoBehaviour
         sit = false;
         steal = false;
         pick_up = false;
-        agent.SetDestination(transform.position);
+        execute_walking=false;
+        execute_sitting=false;
+        execute_stealing=false;
+        execute_picking_up=false;
+    agent.SetDestination(transform.position);
         Destroy(agent);
-        ani.SetInteger("legs", 3);
-        ani.SetInteger("arms", 3);
+        ani.SetInteger("legs", 4);
+        ani.SetInteger("arms", 4);
     }
 
 
