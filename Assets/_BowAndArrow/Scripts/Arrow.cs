@@ -32,7 +32,26 @@ public class Arrow : XRGrabInteractable
     private void CheckForCollision()
     {
         if (Physics.Linecast(lastPosition, tip.position))
+        {
             Stop();
+            GameObject[] people = GameObject.FindGameObjectsWithTag("person");
+            //change to while no one has been hit, should only hit one person even if in same spot
+                foreach (GameObject person in people)
+                {
+                Vector3 personPosition = person.transform.position;
+                float distance = Vector3.Distance(tip.position, personPosition);
+                if (distance < 2)
+                    {
+                    person.transform.position = new Vector3(0, 0, 10);
+                }
+                    }
+GameObject farmer = GameObject.Find("farmer");
+            GameObject LoveSheet = GameObject.Find("Love Sheet");
+            farmer.GetComponent<Test_script>().enabled = false;
+            farmer.transform.position = new Vector3(0, 0, 10);
+            LoveSheet.SetActive(true);
+
+        }
     }
 
     private void Stop()

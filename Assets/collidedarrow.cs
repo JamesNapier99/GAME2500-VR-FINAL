@@ -18,15 +18,21 @@ public class collidedarrow : MonoBehaviour
     }
 
 //this oncollision is not being triggered
-    public void OnCollisionEnter(Collision collider)
+    public void OnCollisionEnter(Collision collision)
     {
         Lovechart.SetActive(true);
-        if (collider.gameObject.name.Contains("arrow"))
+        if (collision.gameObject.name.Contains("arrow"))
         {
             gameObject.GetComponent<Test_script>().enabled = false;
             
             gameObject.transform.position = new Vector3(0, 0,10);
         }
     }
+    private void OnTriggerEnter(Collider collider)
+    {
+        Lovechart.SetActive(true);
+    }
+
+
 
 }
