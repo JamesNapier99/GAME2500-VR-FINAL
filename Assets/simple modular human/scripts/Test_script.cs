@@ -47,6 +47,10 @@ public class Test_script : MonoBehaviour
         sit = false;
         steal = false;
         pick_up = false;
+        agent.SetDestination(transform.position);
+        Destroy(agent);
+        ani.SetInteger("legs", 3);
+        ani.SetInteger("arms", 3);
     }
 
 
@@ -106,10 +110,6 @@ public class Test_script : MonoBehaviour
         yield return new WaitForSeconds(0);
 
         transform.parent = aim_point.transform;
-       
-
-      
-
         Destroy(agent);
 
         ani.SetInteger("legs", 3);
