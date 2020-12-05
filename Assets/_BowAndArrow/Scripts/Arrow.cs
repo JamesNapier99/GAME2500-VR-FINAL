@@ -42,7 +42,7 @@ public class Arrow : XRGrabInteractable
                 {
                 Vector3 personPosition = person.transform.position;
                 float distance = Vector3.Distance(tip.position, personPosition);
-                if (distance < 3)
+                if (distance < 3 && person.GetComponent<ishit>().isPersonhit()==false)
                     {
                     if (distance < currentmin)
                     {
@@ -52,6 +52,7 @@ public class Arrow : XRGrabInteractable
             }
             if (nearest!=null)
             {
+                nearest.GetComponent<ishit>().personishit();
                 nearest.GetComponent<Test_script>().shot();
                 //nearest.GetComponent<Test_script>().enabled = false;
             }
