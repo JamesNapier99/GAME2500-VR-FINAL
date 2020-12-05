@@ -40,9 +40,9 @@ public class Arrow : XRGrabInteractable
             GameObject nearest = null;
             foreach (GameObject person in people)
             {
-                Vector3 personPosition = person.transform.position;
+                Vector3 personPosition = person.transform.position+ new Vector3(0,1,0);
                 float distance = Vector3.Distance(tip.position, personPosition);
-                if (distance < 2 && person.GetComponent<ishit>().isPersonhit() == false)
+                if (distance < 1 && person.GetComponent<ishit>().isPersonhit() == false)
                 {
                     if (distance < currentmin)
                     {
