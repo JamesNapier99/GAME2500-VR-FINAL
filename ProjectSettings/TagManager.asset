@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Hand
+  - pickuppoint
+  - sittingpoint
+  - stealingpoint
+  - waypoint
+  - person
   layers:
   - Default
   - TransparentFX

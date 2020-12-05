@@ -32,7 +32,32 @@ public class Arrow : XRGrabInteractable
     private void CheckForCollision()
     {
         if (Physics.Linecast(lastPosition, tip.position))
+        {
             Stop();
+            GameObject[] people = GameObject.FindGameObjectsWithTag("person");
+            //change to while no one has been hit, should only hit one person even if in same spot
+            int currentmin = 1000;
+            GameObject nearest = null;
+            foreach (GameObject person in people)
+            {
+                Vector3 personPosition = person.transform.position;
+                float distance = Vector3.Distance(tip.position, personPosition);
+                if (distance < 2 && person.GetComponent<ishit>().isPersonhit() == false)
+                {
+                    if (distance < currentmin)
+                    {
+                        nearest = person;
+                    }
+                }
+            }
+            if (nearest != null)
+            {
+                nearest.GetComponent<ishit>().personishit();
+                nearest.GetComponent<Test_script>().shot();
+                //nearest.GetComponent<Test_script>().enabled = false;
+            }
+
+        }
     }
 
     private void Stop()
@@ -71,7 +96,7 @@ public class Arrow : XRGrabInteractable
     {
         yield return new WaitForFixedUpdate();
 
-        while (inAir) 
+        while (inAir)
         {
             Quaternion newRotation = Quaternion.LookRotation(rigidBody.velocity, transform.up);
             transform.rotation = newRotation;
