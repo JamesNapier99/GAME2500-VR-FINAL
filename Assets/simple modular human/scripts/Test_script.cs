@@ -40,6 +40,14 @@ public class Test_script : MonoBehaviour
 
    public bool destermine_new_aim;
 
+    public void shot()
+    {
+        walk = false;
+        run = false;
+        sit = false;
+        steal = false;
+        pick_up = false;
+    }
 
 
     void Start()
