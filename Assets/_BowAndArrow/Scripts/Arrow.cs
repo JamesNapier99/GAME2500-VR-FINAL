@@ -52,9 +52,8 @@ public class Arrow : XRGrabInteractable
             }
             if (nearest!=null)
             {
-              //  nearest.transform.position = new Vector3(0, 0, 10);
                 nearest.GetComponent<Test_script>().shot();
-                nearest.GetComponent<Test_script>().enabled = false;
+                //nearest.GetComponent<Test_script>().enabled = false;
             }
 
         }

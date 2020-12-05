@@ -111,9 +111,9 @@ public class Test_script : MonoBehaviour
 
     IEnumerator sitting_down ()
     {
-        yield return new WaitForSeconds(0);
+       yield return new WaitForSeconds(0);
 
-        transform.parent = aim_point.transform;
+        /*transform.parent = aim_point.transform;
         Destroy(agent);
 
         ani.SetInteger("legs", 3);
@@ -128,7 +128,7 @@ public class Test_script : MonoBehaviour
 
         agent =  gameObject.AddComponent<NavMeshAgent>();
 
-
+        */
         in_sitting = false;
         destermine_new_aim = false;
         transform.parent = null;
@@ -140,7 +140,7 @@ public class Test_script : MonoBehaviour
     IEnumerator stealing_execute()
     {
         yield return new WaitForSeconds(0);
-        crowbar.SetActive(true);
+       /* crowbar.SetActive(true);
         transform.parent = aim_point.transform;
         transform.localPosition = stealing_position;
         transform.localEulerAngles = stealing_Rotation;
@@ -149,7 +149,7 @@ public class Test_script : MonoBehaviour
         ani.SetInteger("arms", 22);
 
         yield return new WaitForSeconds(5);
-        crowbar.SetActive(false);
+        crowbar.SetActive(false);*/
         in_stealing = false;
         destermine_new_aim = false;
         transform.parent = null;
@@ -164,12 +164,12 @@ public class Test_script : MonoBehaviour
 
 
 
-        ani.SetInteger("legs", 32);
+        /*ani.SetInteger("legs", 32);
         ani.SetInteger("arms", 32);
 
 
         yield return new WaitForSeconds(2);
-
+        */
         in_pickup = false;
         destermine_new_aim = false;
         
