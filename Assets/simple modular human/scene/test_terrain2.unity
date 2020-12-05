@@ -2286,7 +2286,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b53236fa84cea7a4688874662d9128ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lovechart: {fileID: 1584917724}
 --- !u!1001 &208734489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3915,6 +3914,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4313400550586899102, guid: 066b9035b24027d409065149bf09ed1b,
+        type: 3}
+      propertyPath: m_TagString
+      value: person
+      objectReference: {fileID: 0}
     - target: {fileID: 4347852745609900024, guid: 066b9035b24027d409065149bf09ed1b,
         type: 3}
       propertyPath: m_IsActive
@@ -4172,6 +4176,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4313400550586899102, guid: 066b9035b24027d409065149bf09ed1b,
+        type: 3}
+      propertyPath: m_TagString
+      value: person
       objectReference: {fileID: 0}
     - target: {fileID: 5313634745067574426, guid: 066b9035b24027d409065149bf09ed1b,
         type: 3}
@@ -4865,6 +4874,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4313400550586899102, guid: 066b9035b24027d409065149bf09ed1b,
+        type: 3}
+      propertyPath: m_TagString
+      value: person
       objectReference: {fileID: 0}
     - target: {fileID: 5313634745067574426, guid: 066b9035b24027d409065149bf09ed1b,
         type: 3}
@@ -5699,6 +5713,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4313400550586899102, guid: 066b9035b24027d409065149bf09ed1b,
+        type: 3}
+      propertyPath: m_TagString
+      value: person
       objectReference: {fileID: 0}
     - target: {fileID: 5313634745067574426, guid: 066b9035b24027d409065149bf09ed1b,
         type: 3}
@@ -10326,6 +10345,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4313400550586899102, guid: 066b9035b24027d409065149bf09ed1b,
+        type: 3}
+      propertyPath: m_TagString
+      value: person
+      objectReference: {fileID: 0}
     - target: {fileID: 5313634745067574426, guid: 066b9035b24027d409065149bf09ed1b,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -10664,6 +10688,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4313400550586899102, guid: 066b9035b24027d409065149bf09ed1b,
+        type: 3}
+      propertyPath: m_TagString
+      value: person
       objectReference: {fileID: 0}
     - target: {fileID: 5313634745067574426, guid: 066b9035b24027d409065149bf09ed1b,
         type: 3}
@@ -12327,6 +12356,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4313400550586899102, guid: 066b9035b24027d409065149bf09ed1b,
+        type: 3}
+      propertyPath: m_TagString
+      value: person
+      objectReference: {fileID: 0}
     - target: {fileID: 5313634745067574426, guid: 066b9035b24027d409065149bf09ed1b,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -12509,6 +12543,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4313400550586899102, guid: 066b9035b24027d409065149bf09ed1b,
+        type: 3}
+      propertyPath: m_TagString
+      value: person
       objectReference: {fileID: 0}
     - target: {fileID: 4466569616339359094, guid: 066b9035b24027d409065149bf09ed1b,
         type: 3}
@@ -13064,6 +13103,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4313400550586899102, guid: 066b9035b24027d409065149bf09ed1b,
+        type: 3}
+      propertyPath: m_TagString
+      value: person
       objectReference: {fileID: 0}
     - target: {fileID: 5313634745067574426, guid: 066b9035b24027d409065149bf09ed1b,
         type: 3}
@@ -16974,6 +17018,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4313400550586899102, guid: 066b9035b24027d409065149bf09ed1b,
+        type: 3}
+      propertyPath: m_TagString
+      value: person
+      objectReference: {fileID: 0}
     - target: {fileID: 4909518879565790791, guid: 066b9035b24027d409065149bf09ed1b,
         type: 3}
       propertyPath: m_IsActive
@@ -17230,6 +17279,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4313400550586899102, guid: 066b9035b24027d409065149bf09ed1b,
+        type: 3}
+      propertyPath: m_TagString
+      value: person
       objectReference: {fileID: 0}
     - target: {fileID: 5313634745067574426, guid: 066b9035b24027d409065149bf09ed1b,
         type: 3}
@@ -17660,6 +17714,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4313400550586899102, guid: 066b9035b24027d409065149bf09ed1b,
+        type: 3}
+      propertyPath: m_TagString
+      value: person
       objectReference: {fileID: 0}
     - target: {fileID: 4347852745609900024, guid: 066b9035b24027d409065149bf09ed1b,
         type: 3}
@@ -18489,6 +18548,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4313400550586899102, guid: 066b9035b24027d409065149bf09ed1b,
+        type: 3}
+      propertyPath: m_TagString
+      value: person
       objectReference: {fileID: 0}
     - target: {fileID: 5313634745067574426, guid: 066b9035b24027d409065149bf09ed1b,
         type: 3}
@@ -19334,6 +19398,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4313400550586899102, guid: 066b9035b24027d409065149bf09ed1b,
+        type: 3}
+      propertyPath: m_TagString
+      value: person
       objectReference: {fileID: 0}
     - target: {fileID: 5313634745067574426, guid: 066b9035b24027d409065149bf09ed1b,
         type: 3}
@@ -21679,6 +21748,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4313400550586899102, guid: 066b9035b24027d409065149bf09ed1b,
+        type: 3}
+      propertyPath: m_TagString
+      value: person
+      objectReference: {fileID: 0}
     - target: {fileID: 5313634745067574426, guid: 066b9035b24027d409065149bf09ed1b,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -21719,7 +21793,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b53236fa84cea7a4688874662d9128ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lovechart: {fileID: 1584917724}
 --- !u!1 &2078696572
 GameObject:
   m_ObjectHideFlags: 0
