@@ -12,7 +12,11 @@ public class countofHitstuff : MonoBehaviour
     bool two = true;
     bool three = true;
     bool four = true;
+    public GameObject green1;
+    public GameObject green2;
+    public GameObject green3;
     public GameObject green4;
+
 
     public void aNewHit(string character, int color)
     {
@@ -28,6 +32,7 @@ public class countofHitstuff : MonoBehaviour
                 else
                 {
                     isMatch(character, arrowR);
+                    one = true;
                 }
                 break;
             case 2:
@@ -40,6 +45,7 @@ public class countofHitstuff : MonoBehaviour
                 else
                 {
                     isMatch(character, arrowY);
+                    two = true;
                 }
                 break;
             case 3:
@@ -51,6 +57,7 @@ public class countofHitstuff : MonoBehaviour
                 else
                 {
                     isMatch(character, arrowG);
+                    three = true;
                 }
                 break;
             case 4:
@@ -63,6 +70,7 @@ public class countofHitstuff : MonoBehaviour
                 else
                 {
                     isMatch(character, arrowB);
+                    four = true;
                 }
                 break;
         }
@@ -74,21 +82,21 @@ public class countofHitstuff : MonoBehaviour
         {
             if (arrow == "woman2" || arrow == "randomdude")
             {
-                GameObject.Find("Love Sheet").SetActive(false);
+                green1.SetActive(true);
             }
         }
         else if (nearest == "mechanic" || nearest == "randomwoman")
         {
             if (arrow == "mechanic" || arrow == "randomwoman")
             {
-                GameObject.Find("Love Sheet").SetActive(false);
+                green2.SetActive(true);
             }
         }
         else if (nearest == "farmer" || nearest == "woman3")
         {
             if (arrow == "woman3" || arrow == "farmer")
             {
-                GameObject.Find("Love Sheet").SetActive(false);
+                green3.SetActive(true);
             }
         }
         else if (nearest == "salesman" || nearest == "cop")
@@ -102,6 +110,7 @@ public class countofHitstuff : MonoBehaviour
         {
         //    GameObject.Find(nearest).GetComponent<Test_script>().failed();
             GameObject.Find(nearest).SetActive(false);
+            GameObject.Find(arrow).SetActive(false);
         }
 
     }
