@@ -22,7 +22,6 @@ public class ishit : MonoBehaviour
     }
     public void personishit()
     {
-       // arrowColor = val;
         shot = true;
     }
 

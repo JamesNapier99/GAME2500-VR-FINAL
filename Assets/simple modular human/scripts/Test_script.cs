@@ -58,6 +58,12 @@ public class Test_script : MonoBehaviour
         ani.SetInteger("legs", 4);
         ani.SetInteger("arms", 4);
     }
+    public void failed()
+    {
+        agent = gameObject.AddComponent<NavMeshAgent>();
+        destermine_new_aim = false;
+        transform.parent = null;
+    }
 
 
     void Start()

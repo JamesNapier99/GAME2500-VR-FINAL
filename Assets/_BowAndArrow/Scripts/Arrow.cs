@@ -11,10 +11,6 @@ public class Arrow : XRGrabInteractable
     private Vector3 lastPosition = Vector3.zero;
 
     private Rigidbody rigidBody = null;
-    string arrowR;
-    string arrowY;
-    string arrowG;
-    string arrowB;
     GameObject nearest=null;
     public bool first=false;
 
@@ -65,17 +61,19 @@ public class Arrow : XRGrabInteractable
                     GameObject.Find("arrowtracker").GetComponent<countofHitstuff>().aNewHit(name, 1);
                     nearest.GetComponent<ishit>().personishit();
                 }
-                if (gameObject.name.Contains("Arrow_Y"))
+                else if (gameObject.name.Contains("Arrow_Y"))
                 {
+           
                     GameObject.Find("arrowtracker").GetComponent<countofHitstuff>().aNewHit(name, 2);
                     nearest.GetComponent<ishit>().personishit();
                 }
-                if (gameObject.name.Contains("Arrow_G"))
+                else if (gameObject.name.Contains("Arrow_G"))
                 {
+                    nearest.SetActive(false);
                     GameObject.Find("arrowtracker").GetComponent<countofHitstuff>().aNewHit(name, 3);
                     nearest.GetComponent<ishit>().personishit();
                 }
-                if (gameObject.name.Contains("Arrow_B"))
+                else if (gameObject.name.Contains("Arrow_B"))
                 {
                     GameObject.Find("arrowtracker").GetComponent<countofHitstuff>().aNewHit(name, 4);
                     nearest.GetComponent<ishit>().personishit();
