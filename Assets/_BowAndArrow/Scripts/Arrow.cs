@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using TMPro;
 
 public class Arrow : XRGrabInteractable
 {
@@ -12,10 +13,13 @@ public class Arrow : XRGrabInteractable
 
     private Rigidbody rigidBody = null;
 
+    public TimerText timerText = null;
+
     protected override void Awake()
     {
         base.Awake();
         rigidBody = GetComponent<Rigidbody>();
+        timerText = gameObject.GetComponent<TimerText>();
     }
 
     private void FixedUpdate()
@@ -39,6 +43,7 @@ public class Arrow : XRGrabInteractable
     {
         inAir = false;
         SetPhysics(false);
+        timerText.PairPenalty();
     }
 
     public void Release(float pullValue)

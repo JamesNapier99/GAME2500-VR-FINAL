@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/_BowAndArrow/Main.unity
-    guid: 0bdc2251efd355d45add28195d99d336
   - enabled: 1
-    path: Assets/simple modular human/scene/test_terrain2.unity
+    path: Assets/_BowAndArrow/Start Menu.unity
+    guid: 10706ebc3a2c30a4abb980e8286a298b
+  - enabled: 1
+    path: Assets/simple modular human/scene/GamePlay.unity
     guid: 7924b58cfceabaa42af7eac4cd9a0cb6
   m_configObjects: {}
