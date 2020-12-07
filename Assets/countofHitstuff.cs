@@ -49,6 +49,7 @@ public class countofHitstuff : MonoBehaviour
                 }
                 break;
             case 3:
+              
                 if (three == true)
                 {
                     three = false;
@@ -58,6 +59,7 @@ public class countofHitstuff : MonoBehaviour
                 {
                     isMatch(character, arrowG);
                     three = true;
+                   
                 }
                 break;
             case 4:
@@ -76,32 +78,33 @@ public class countofHitstuff : MonoBehaviour
         }
     }
 
-    private void isMatch(string nearest, string arrow)
+    private void isMatch(string nearest, string color)
     {
+
         if (nearest == "woman2" || nearest == "randomdude")
         {
-            if (arrow == "woman2" || arrow == "randomdude")
+            if (color == "woman2" || color == "randomdude")
             {
                 green1.SetActive(true);
             }
         }
         else if (nearest == "mechanic" || nearest == "randomwoman")
         {
-            if (arrow == "mechanic" || arrow == "randomwoman")
+            if (color == "mechanic" || color == "randomwoman")
             {
                 green2.SetActive(true);
             }
         }
         else if (nearest == "farmer" || nearest == "woman3")
         {
-            if (arrow == "woman3" || arrow == "farmer")
+            if (color == "woman3" || color == "farmer")
             {
                 green3.SetActive(true);
             }
         }
         else if (nearest == "salesman" || nearest == "cop")
         {
-            if (arrow == "salesman" || arrow == "cop")
+            if (color == "salesman" || color == "cop")
             {
                 green4.SetActive(true);
             }
@@ -110,7 +113,7 @@ public class countofHitstuff : MonoBehaviour
         {
         //    GameObject.Find(nearest).GetComponent<Test_script>().failed();
             GameObject.Find(nearest).SetActive(false);
-            GameObject.Find(arrow).SetActive(false);
+            GameObject.Find(color).SetActive(false);
         }
 
     }
