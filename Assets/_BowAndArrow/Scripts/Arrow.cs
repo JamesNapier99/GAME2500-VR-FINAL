@@ -11,6 +11,13 @@ public class Arrow : XRGrabInteractable
     private Vector3 lastPosition = Vector3.zero;
 
     private Rigidbody rigidBody = null;
+    string arrowR;
+    string arrowY;
+    string arrowG;
+    string arrowB;
+    GameObject nearest=null;
+    public bool first=false;
+
 
     protected override void Awake()
     {
@@ -37,7 +44,6 @@ public class Arrow : XRGrabInteractable
             GameObject[] people = GameObject.FindGameObjectsWithTag("person");
             //change to while no one has been hit, should only hit one person even if in same spot
             int currentmin = 1000;
-            GameObject nearest = null;
             foreach (GameObject person in people)
             {
                 Vector3 personPosition = person.transform.position+ new Vector3(0,1,0);
@@ -52,9 +58,28 @@ public class Arrow : XRGrabInteractable
             }
             if (nearest != null)
             {
-                nearest.GetComponent<ishit>().personishit();
                 nearest.GetComponent<Test_script>().shot();
-                //nearest.GetComponent<Test_script>().enabled = false;
+                if (gameObject.name.Contains("Arrow_R"))
+                {
+                    string name = nearest.name;
+                    GameObject.Find("arrowtracker").GetComponent<countofHitstuff>().aNewHit(name, 1);
+                    nearest.GetComponent<ishit>().personishit();
+                }
+                if (gameObject.name.Contains("Arrow_Y"))
+                {
+                    GameObject.Find("arrowtracker").GetComponent<countofHitstuff>().aNewHit(name, 2);
+                    nearest.GetComponent<ishit>().personishit();
+                }
+                if (gameObject.name.Contains("Arrow_G"))
+                {
+                    GameObject.Find("arrowtracker").GetComponent<countofHitstuff>().aNewHit(name, 3);
+                    nearest.GetComponent<ishit>().personishit();
+                }
+                if (gameObject.name.Contains("Arrow_B"))
+                {
+                    GameObject.Find("arrowtracker").GetComponent<countofHitstuff>().aNewHit(name, 4);
+                    nearest.GetComponent<ishit>().personishit();
+                }
             }
 
         }

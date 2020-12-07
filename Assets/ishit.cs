@@ -5,9 +5,11 @@ using UnityEngine;
 public class ishit : MonoBehaviour
 {
     bool shot = false;
+  //  int arrowColor;
     // Start is called before the first frame update
     void Start()
     {
+     
     }
 
     // Update is called once per frame
@@ -20,6 +22,8 @@ public class ishit : MonoBehaviour
     }
     public void personishit()
     {
+       // arrowColor = val;
         shot = true;
     }
+
 }

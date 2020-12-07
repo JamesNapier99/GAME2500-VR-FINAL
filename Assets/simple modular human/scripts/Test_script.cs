@@ -38,6 +38,8 @@ public class Test_script : MonoBehaviour
     public bool steal;
     public bool pick_up;
 
+
+
     public bool destermine_new_aim;
 
     public void shot()
