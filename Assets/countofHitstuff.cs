@@ -12,6 +12,7 @@ public class countofHitstuff : MonoBehaviour
     bool two = true;
     bool three = true;
     bool four = true;
+    public GameObject green4;
 
     public void aNewHit(string character, int color)
     {
@@ -94,13 +95,13 @@ public class countofHitstuff : MonoBehaviour
         {
             if (arrow == "salesman" || arrow == "cop")
             {
-                GameObject.Find("Love Sheet").SetActive(false);
+                green4.SetActive(true);
             }
         }
         else
         {
         //    GameObject.Find(nearest).GetComponent<Test_script>().failed();
-            GameObject.Find(arrow).SetActive(false);
+            GameObject.Find(nearest).SetActive(false);
         }
 
     }

@@ -69,7 +69,7 @@ public class Arrow : XRGrabInteractable
                 }
                 else if (gameObject.name.Contains("Arrow_G"))
                 {
-                    nearest.SetActive(false);
+                   
                     GameObject.Find("arrowtracker").GetComponent<countofHitstuff>().aNewHit(name, 3);
                     nearest.GetComponent<ishit>().personishit();
                 }
