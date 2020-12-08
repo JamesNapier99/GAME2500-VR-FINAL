@@ -19,17 +19,19 @@ public class countofHitstuff : MonoBehaviour
     int count = 0;
 
 
-    public void aNewHit(string character, int color)
+    public void aNewHit(GameObject person, int color)
     {
+        string character = person.name;
         switch (color)
         {
             case 1:
 
                 if (one == true)
                 {
+                    person.GetComponent<ishit>().personishit();
                     one = false;
                     arrowR = character;
-                    GameObject.Find(character).GetComponent<Test_script>().shot();
+                    person.GetComponent<Test_script>().shot();
                 }
                 else
                 {
@@ -41,6 +43,7 @@ public class countofHitstuff : MonoBehaviour
 
                 if (two == true)
                 {
+                    person.GetComponent<ishit>().personishit();
                     two = false;
                     arrowY = character;
                     GameObject.Find(character).GetComponent<Test_script>().shot();
@@ -55,12 +58,14 @@ public class countofHitstuff : MonoBehaviour
               
                 if (three == true)
                 {
+                    person.GetComponent<ishit>().personishit();
                     three = false;
                     arrowG = character;
                     GameObject.Find(character).GetComponent<Test_script>().shot();
                 }
                 else
                 {
+                    person.GetComponent<ishit>().personishit();
                     isMatch(character, arrowG, "Arrow_G");
                     three = true;
 
@@ -122,6 +127,7 @@ public class countofHitstuff : MonoBehaviour
         else
         {
             GameObject.Find(color).GetComponent<Test_script>().failed();
+            GameObject.Find(color).GetComponent<ishit>().personunhit();
             GameObject.Find("Timer").GetComponent<TimerText>().PairPenalty();
            
         }

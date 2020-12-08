@@ -58,30 +58,22 @@ public class Arrow : XRGrabInteractable
             {
                 if (gameObject.name.Contains("Arrow_R"))
                 {
-                    string name = nearest.name;
-                    nearest.GetComponent<ishit>().personishit();
-                    GameObject.Find("arrowtracker").GetComponent<countofHitstuff>().aNewHit(name, 1);
+                    GameObject.Find("arrowtracker").GetComponent<countofHitstuff>().aNewHit(nearest, 1);
                     
                 }
                 else if (gameObject.name.Contains("Arrow_Y"))
                 {
-                    string name = nearest.name;
-                    nearest.GetComponent<ishit>().personishit();
-                    GameObject.Find("arrowtracker").GetComponent<countofHitstuff>().aNewHit(name, 2);
+                    GameObject.Find("arrowtracker").GetComponent<countofHitstuff>().aNewHit(nearest, 2);
                    
                 }
                 else if (gameObject.name.Contains("Arrow_G"))
                 {
-                    string name = nearest.name;
-                    nearest.GetComponent<ishit>().personishit();
-                    GameObject.Find("arrowtracker").GetComponent<countofHitstuff>().aNewHit(name, 3);
+                    GameObject.Find("arrowtracker").GetComponent<countofHitstuff>().aNewHit(nearest, 3);
                    
                 }
                 else if (gameObject.name.Contains("Arrow_B"))
                 {
-                    string name = nearest.name;
-                    nearest.GetComponent<ishit>().personishit();
-                    GameObject.Find("arrowtracker").GetComponent<countofHitstuff>().aNewHit(name, 4);
+                    GameObject.Find("arrowtracker").GetComponent<countofHitstuff>().aNewHit(nearest, 4);
                     
                 }
             }

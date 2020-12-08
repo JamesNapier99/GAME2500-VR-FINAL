@@ -24,5 +24,9 @@ public class ishit : MonoBehaviour
     {
         shot = true;
     }
+    public void personunhit()
+    {
+        shot = false;
+    }
 
 }
