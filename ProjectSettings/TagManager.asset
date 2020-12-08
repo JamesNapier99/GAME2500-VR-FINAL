@@ -10,6 +10,7 @@ TagManager:
   - stealingpoint
   - waypoint
   - person
+  - arrow
   layers:
   - Default
   - TransparentFX

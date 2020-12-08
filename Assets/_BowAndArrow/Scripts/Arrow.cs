@@ -39,16 +39,18 @@ public class Arrow : XRGrabInteractable
             Stop();
             GameObject[] people = GameObject.FindGameObjectsWithTag("person");
             //change to while no one has been hit, should only hit one person even if in same spot
-            int currentmin = 1000;
+            float currentmin = 1000;
             foreach (GameObject person in people)
             {
                 Vector3 personPosition = person.transform.position+ new Vector3(0,1,0);
                 float distance = Vector3.Distance(tip.position, personPosition);
                 if (distance < 1 && person.GetComponent<ishit>().isPersonhit() == false)
                 {
+                   // float playerDistance= Vector3.Distance(tip.position - new Vector3(0, 8, 0));
                     if (distance < currentmin)
                     {
                         nearest = person;
+                        currentmin = distance;
                     }
                 }
             }

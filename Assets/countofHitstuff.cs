@@ -33,9 +33,8 @@ public class countofHitstuff : MonoBehaviour
                 }
                 else
                 {
-                    isMatch(character, arrowR);
+                    isMatch(character, arrowR, "Arrow_R(Clone)");
                     one = true;
-                    arrowR = null;
                 }
                 break;
             case 2:
@@ -48,9 +47,8 @@ public class countofHitstuff : MonoBehaviour
                 }
                 else
                 {
-                    isMatch(character, arrowY);
+                    isMatch(character, arrowY, "Arrow_Y");
                     two = true;
-                    arrowY = null;
                 }
                 break;
             case 3:
@@ -63,9 +61,8 @@ public class countofHitstuff : MonoBehaviour
                 }
                 else
                 {
-                    isMatch(character, arrowG);
+                    isMatch(character, arrowG, "Arrow_G");
                     three = true;
-                    arrowG = null;
 
                 }
                 break;
@@ -79,16 +76,15 @@ public class countofHitstuff : MonoBehaviour
                 }
                 else
                 {
-                    isMatch(character, arrowB);
+                    isMatch(character, arrowB, "Arrow_B");
                     four = true;
-                    arrowB = null;
 
                 }
                 break;
         }
     }
 
-    private void isMatch(string nearest, string color)
+    private void isMatch(string nearest, string color, string arrowColor)
     {
 
         if ((nearest == "woman2" || nearest == "randomdude")&& (color == "woman2" || color == "randomdude"))
@@ -96,28 +92,32 @@ public class countofHitstuff : MonoBehaviour
                 green1.SetActive(true);
                 GameObject.Find(nearest).SetActive(false);
                 GameObject.Find(color).SetActive(false);
-                count++;
+            GameObject.Find(arrowColor).SetActive(false);
+            count++;
             }
         else if ((nearest == "mechanic" || nearest == "randomwoman")&&(color == "mechanic" || color == "randomwoman"))
             {
                 green2.SetActive(true);
                 GameObject.Find(nearest).SetActive(false);
                 GameObject.Find(color).SetActive(false);
-                count++;
+            GameObject.Find(arrowColor).SetActive(false);
+            count++;
             }
         else if ((nearest == "farmer" || nearest == "woman3") && (color == "woman3" || color == "farmer"))
             {
                 green3.SetActive(true);
                 GameObject.Find(nearest).SetActive(false);
                 GameObject.Find(color).SetActive(false);
-                count++;
+            GameObject.Find(arrowColor).SetActive(false);
+            count++;
             }
         else if ((nearest == "salesman" || nearest == "cop") && (color == "salesman" || color == "cop"))
             {
                 green4.SetActive(true);
                 GameObject.Find(nearest).SetActive(false);
                 GameObject.Find(color).SetActive(false);
-                count++;
+            GameObject.Find(arrowColor).SetActive(false);
+            count++;
             }
         else
         {
