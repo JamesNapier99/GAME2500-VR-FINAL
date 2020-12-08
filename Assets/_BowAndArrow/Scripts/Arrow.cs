@@ -54,7 +54,6 @@ public class Arrow : XRGrabInteractable
             }
             if (nearest != null)
             {
-                nearest.GetComponent<Test_script>().shot();
                 if (gameObject.name.Contains("Arrow_R"))
                 {
                     string name = nearest.name;

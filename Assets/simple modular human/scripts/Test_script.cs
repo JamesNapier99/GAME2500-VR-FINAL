@@ -44,7 +44,7 @@ public class Test_script : MonoBehaviour
 
     public void shot()
     {
-       /* walk = false;
+        walk = false;
         run = false;
         sit = false;
         steal = false;
@@ -53,7 +53,7 @@ public class Test_script : MonoBehaviour
         execute_sitting = false;
         execute_stealing = false;
         execute_picking_up = false;
-        agent.SetDestination(transform.position);*/
+        agent.SetDestination(transform.position);
         Destroy(agent);
         ani.SetInteger("legs", 4);
         ani.SetInteger("arms", 4);
@@ -61,13 +61,16 @@ public class Test_script : MonoBehaviour
     public void failed()
     {
         agent = gameObject.AddComponent<NavMeshAgent>();
-        ani.SetInteger("legs", 4);
-        ani.SetInteger("arms", 4);
-        //walk = true;
-        //execute_walking = true;
-       // destermine_new_aim = false;
-       // transform.parent = null;
-       // Start();
+        ani.SetInteger("legs", 3);
+        ani.SetInteger("arms", 3);
+        walk = true;
+        execute_walking = true;
+       destermine_new_aim = false;
+       transform.parent = null;
+        int Which_point = UnityEngine.Random.Range(0, way_points.Count);
+        aim_point = way_points[Which_point].gameObject;
+        destermine_new_aim = true;
+        //Start();
     }
 
 

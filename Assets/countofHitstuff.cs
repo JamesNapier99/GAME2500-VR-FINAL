@@ -29,11 +29,12 @@ public class countofHitstuff : MonoBehaviour
                 {
                     one = false;
                     arrowR = character;
+                    GameObject.Find(character).GetComponent<Test_script>().shot();
                 }
                 else
                 {
                     isMatch(character, arrowR);
-                    one = true;
+                    //one = true;
                 }
                 break;
             case 2:
@@ -42,11 +43,12 @@ public class countofHitstuff : MonoBehaviour
                 {
                     two = false;
                     arrowY = character;
+                    GameObject.Find(character).GetComponent<Test_script>().shot();
                 }
                 else
                 {
                     isMatch(character, arrowY);
-                    two = true;
+                    //two = true;
                 }
                 break;
             case 3:
@@ -55,11 +57,12 @@ public class countofHitstuff : MonoBehaviour
                 {
                     three = false;
                     arrowG = character;
+                    GameObject.Find(character).GetComponent<Test_script>().shot();
                 }
                 else
                 {
                     isMatch(character, arrowG);
-                    three = true;
+                   // three = true;
                    
                 }
                 break;
@@ -69,11 +72,12 @@ public class countofHitstuff : MonoBehaviour
                 {
                     four = false;
                     arrowB = character;
+                    GameObject.Find(character).GetComponent<Test_script>().shot();
                 }
                 else
                 {
                     isMatch(character, arrowB);
-                    four = true;
+                   // four = true;
                 }
                 break;
         }
@@ -113,7 +117,7 @@ public class countofHitstuff : MonoBehaviour
         else
         {
             GameObject.Find(color).GetComponent<Test_script>().failed();
-            GameObject.Find(nearest).GetComponent<Test_script>().failed();
+            //GameObject.Find(nearest).GetComponent<Test_script>().failed();
            
         }
 
