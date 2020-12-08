@@ -122,7 +122,7 @@ public class countofHitstuff : MonoBehaviour
         else
         {
             GameObject.Find(color).GetComponent<Test_script>().failed();
-            //GameObject.Find(nearest).GetComponent<Test_script>().failed();
+            GameObject.Find("Timer").GetComponent<TimerText>().PairPenalty();
            
         }
 
