@@ -44,7 +44,7 @@ public class Arrow : XRGrabInteractable
             {
                 Vector3 personPosition = person.transform.position+ new Vector3(0,1,0);
                 float distance = Vector3.Distance(tip.position, personPosition);
-                if (distance < 1 && person.GetComponent<ishit>().isPersonhit() == false)
+                if (distance < 1.5 && person.GetComponent<ishit>().isPersonhit() == false)
                 {
                    // float playerDistance= Vector3.Distance(tip.position - new Vector3(0, 8, 0));
                     if (distance < currentmin)

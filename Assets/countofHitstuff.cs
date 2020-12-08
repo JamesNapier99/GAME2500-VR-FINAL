@@ -16,8 +16,10 @@ public class countofHitstuff : MonoBehaviour
     public GameObject green2;
     public GameObject green3;
     public GameObject green4;
-    int count = 0;
-
+   public AudioClip success;
+    public AudioClip fail;
+    public AudioClip gameMusic;
+    public AudioClip endGame;
 
     public void aNewHit(GameObject person, int color)
     {
@@ -35,7 +37,7 @@ public class countofHitstuff : MonoBehaviour
                 }
                 else
                 {
-                    isMatch(character, arrowR, "Arrow_R(Clone)");
+                    isMatch(character, arrowR);
                     one = true;
                 }
                 break;
@@ -50,7 +52,7 @@ public class countofHitstuff : MonoBehaviour
                 }
                 else
                 {
-                    isMatch(character, arrowY, "Arrow_Y");
+                    isMatch(character, arrowY);
                     two = true;
                 }
                 break;
@@ -66,7 +68,7 @@ public class countofHitstuff : MonoBehaviour
                 else
                 {
                     person.GetComponent<ishit>().personishit();
-                    isMatch(character, arrowG, "Arrow_G");
+                    isMatch(character, arrowG);
                     three = true;
 
                 }
@@ -75,62 +77,107 @@ public class countofHitstuff : MonoBehaviour
 
                 if (four == true)
                 {
+                    person.GetComponent<ishit>().personishit();
                     four = false;
                     arrowB = character;
                     GameObject.Find(character).GetComponent<Test_script>().shot();
                 }
                 else
                 {
-                    isMatch(character, arrowB, "Arrow_B");
+                    isMatch(character, arrowB);
                     four = true;
-
                 }
                 break;
         }
     }
 
-    private void isMatch(string nearest, string color, string arrowColor)
+    private void isMatch(string nearest, string color)
     {
+        //failure();
+        if ((nearest == "woman2" || nearest == "randomdude") && (color == "woman2" || color == "randomdude"))
+        {
+            green1.SetActive(true);
 
-        if ((nearest == "woman2" || nearest == "randomdude")&& (color == "woman2" || color == "randomdude"))
-            {
-                green1.SetActive(true);
-                GameObject.Find(nearest).SetActive(false);
-                GameObject.Find(color).SetActive(false);
-            GameObject.Find(arrowColor).SetActive(false);
-            count++;
-            }
-        else if ((nearest == "mechanic" || nearest == "randomwoman")&&(color == "mechanic" || color == "randomwoman"))
-            {
-                green2.SetActive(true);
-                GameObject.Find(nearest).SetActive(false);
-                GameObject.Find(color).SetActive(false);
-            GameObject.Find(arrowColor).SetActive(false);
-            count++;
-            }
+            GameObject.Find("Timer").GetComponent<TimerText>().endgame();
+            GameObject.Find(nearest).SetActive(false);
+            GameObject.Find(color).SetActive(false);
+            successful();
+            //GameObject.Find(arrowColor).SetActive(false);
+        }
+        else if ((nearest == "mechanic" || nearest == "randomwoman") && (color == "mechanic" || color == "randomwoman"))
+        {
+
+            
+            green2.SetActive(true);
+            GameObject.Find("Timer").GetComponent<TimerText>().endgame();
+            GameObject.Find(nearest).SetActive(false);
+            GameObject.Find(color).SetActive(false);
+           successful();
+           // GameObject.Find(arrowColor).SetActive(false);
+        }
         else if ((nearest == "farmer" || nearest == "woman3") && (color == "woman3" || color == "farmer"))
-            {
-                green3.SetActive(true);
-                GameObject.Find(nearest).SetActive(false);
-                GameObject.Find(color).SetActive(false);
-            GameObject.Find(arrowColor).SetActive(false);
-            count++;
-            }
+        {
+            green3.SetActive(true);
+
+            GameObject.Find("Timer").GetComponent<TimerText>().endgame();
+            GameObject.Find(nearest).SetActive(false);
+            GameObject.Find(color).SetActive(false);
+           successful();
+           // GameObject.Find(arrowColor).SetActive(false);
+        }
         else if ((nearest == "salesman" || nearest == "cop") && (color == "salesman" || color == "cop"))
-            {
-                green4.SetActive(true);
-                GameObject.Find(nearest).SetActive(false);
-                GameObject.Find(color).SetActive(false);
-            GameObject.Find(arrowColor).SetActive(false);
-            count++;
-            }
+        {
+            green4.SetActive(true);
+
+            GameObject.Find("Timer").GetComponent<TimerText>().endgame();
+            GameObject.Find(nearest).SetActive(false);
+            GameObject.Find(color).SetActive(false);
+           successful();
+          //  GameObject.Find(arrowColor).SetActive(false);
+        }
         else
         {
             GameObject.Find(color).GetComponent<Test_script>().failed();
             GameObject.Find(color).GetComponent<ishit>().personunhit();
             GameObject.Find("Timer").GetComponent<TimerText>().PairPenalty();
-           
+            failure();
+
         }
+
+    }
+    void failure()
+{
+       AudioSource audio = GetComponent<AudioSource>();
+        audio.clip = fail;
+        audio.loop = false;
+        audio.Play(0);
+        Invoke("StopAudio", 2.0f);
+ }
+
+    private void StopAudio()
+    {
+        GetComponent<AudioSource>().Stop();
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.clip = gameMusic;
+        audio.loop = true;
+        audio.Play(0);
+
+    }
+    void successful()
+    {
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.clip = success;
+        audio.loop = false;
+        audio.Play(0);
+        Invoke("StopAudio", 2.0f);
+    }
+   public void endSound()
+    {
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.clip = endGame;
+        audio.loop = false;
+        audio.Play(0);
+        Invoke("StopAudio", 6.0f);
 
     }
 }
