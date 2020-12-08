@@ -16,6 +16,7 @@ public class countofHitstuff : MonoBehaviour
     public GameObject green2;
     public GameObject green3;
     public GameObject green4;
+    int count = 0;
 
 
     public void aNewHit(string character, int color)
@@ -81,39 +82,39 @@ public class countofHitstuff : MonoBehaviour
     private void isMatch(string nearest, string color)
     {
 
-        if (nearest == "woman2" || nearest == "randomdude")
-        {
-            if (color == "woman2" || color == "randomdude")
+        if ((nearest == "woman2" || nearest == "randomdude")&& (color == "woman2" || color == "randomdude"))
             {
                 green1.SetActive(true);
+                GameObject.Find(nearest).SetActive(false);
+                GameObject.Find(color).SetActive(false);
+                count++;
             }
-        }
-        else if (nearest == "mechanic" || nearest == "randomwoman")
-        {
-            if (color == "mechanic" || color == "randomwoman")
+        else if ((nearest == "mechanic" || nearest == "randomwoman")&&(color == "mechanic" || color == "randomwoman"))
             {
                 green2.SetActive(true);
+                GameObject.Find(nearest).SetActive(false);
+                GameObject.Find(color).SetActive(false);
+                count++;
             }
-        }
-        else if (nearest == "farmer" || nearest == "woman3")
-        {
-            if (color == "woman3" || color == "farmer")
+        else if ((nearest == "farmer" || nearest == "woman3") && (color == "woman3" || color == "farmer"))
             {
                 green3.SetActive(true);
+                GameObject.Find(nearest).SetActive(false);
+                GameObject.Find(color).SetActive(false);
+                count++;
             }
-        }
-        else if (nearest == "salesman" || nearest == "cop")
-        {
-            if (color == "salesman" || color == "cop")
+        else if ((nearest == "salesman" || nearest == "cop") && (color == "salesman" || color == "cop"))
             {
                 green4.SetActive(true);
+                GameObject.Find(nearest).SetActive(false);
+                GameObject.Find(color).SetActive(false);
+                count++;
             }
-        }
         else
         {
-        //    GameObject.Find(nearest).GetComponent<Test_script>().failed();
-            GameObject.Find(nearest).SetActive(false);
-            GameObject.Find(color).SetActive(false);
+            GameObject.Find(color).GetComponent<Test_script>().failed();
+            GameObject.Find(nearest).GetComponent<Test_script>().failed();
+           
         }
 
     }
