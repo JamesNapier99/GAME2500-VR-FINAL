@@ -34,7 +34,8 @@ public class countofHitstuff : MonoBehaviour
                 else
                 {
                     isMatch(character, arrowR);
-                    //one = true;
+                    one = true;
+                    arrowR = null;
                 }
                 break;
             case 2:
@@ -48,7 +49,8 @@ public class countofHitstuff : MonoBehaviour
                 else
                 {
                     isMatch(character, arrowY);
-                    //two = true;
+                    two = true;
+                    arrowY = null;
                 }
                 break;
             case 3:
@@ -62,8 +64,9 @@ public class countofHitstuff : MonoBehaviour
                 else
                 {
                     isMatch(character, arrowG);
-                   // three = true;
-                   
+                    three = true;
+                    arrowG = null;
+
                 }
                 break;
             case 4:
@@ -77,7 +80,9 @@ public class countofHitstuff : MonoBehaviour
                 else
                 {
                     isMatch(character, arrowB);
-                   // four = true;
+                    four = true;
+                    arrowB = null;
+
                 }
                 break;
         }
